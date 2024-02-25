@@ -18,3 +18,13 @@ ul, li  {
   list-style-type: none;
 }
 
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.photo {
+  width: 500px;
+}
+
