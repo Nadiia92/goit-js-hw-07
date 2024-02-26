@@ -13,17 +13,19 @@ const images = [
     },
   ];
   
-  const list = document.querySelector(".gallery");
+ 
+const list = document.querySelector(".gallery");
+const fragment = document.createDocumentFragment();
 
-images.forEach(function(image) {
+images.forEach(image => {
   const listItem = document.createElement("li");
   listItem.className = "list";
   const imageItem = document.createElement("img");
   imageItem.src = image.url;
   imageItem.alt = image.alt;
   imageItem.className = "photo";
-  list.appendChild(listItem);
   listItem.appendChild(imageItem);
-  
+  fragment.appendChild(listItem);
 });
 
+list.appendChild(fragment);
